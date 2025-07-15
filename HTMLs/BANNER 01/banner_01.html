@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>GrapesJS com Poppins</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="index,follow" />
+  <meta name="generator" content="GrapesJS Studio" />
+  <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    :root {
+      --gjs-t-color-primary: #cf549e;
+      --gjs-t-color-secondary: #b9227d;
+      --gjs-t-color-accent: #ffb347;
+      --gjs-t-color-success: #28a745;
+      --gjs-t-color-warning: #ffc107;
+      --gjs-t-color-error: #dc3545;
+    }
+
+    body {
+      background-color: #e7e7e7;
+      font-family: system-ui, sans-serif;
+      margin: 0;
+    }
+
+    .head {
+      padding: 50px 50px 35px;
+    }
+
+    .logo {
+      height: 50px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .card {
+      max-width: 700px;
+      padding: 40px 45px;
+      background-color: white;
+      border-radius: 15px;
+      margin: 0 auto;
+    }
+
+    .title {
+      margin: 0;
+      text-align: center;
+    }
+
+    .gjs-t-body {
+      background-color: inherit;
+      color: inherit;
+      font-size: 1rem;
+      line-height: 1.75rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin: 0;
+      padding: 25px 0;
+    }
+
+    .paragraph {
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    .link {
+      color: #af4e8a;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .gjs-t-h1 {
+      color: var(--gjs-t-color-secondary);
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+
+    .button {
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      text-align: center;
+      border-width: 0;
+    }
+
+    .gjs-t-h2 {
+      color: #601843;
+      font-size: 1.2rem;
+      line-height: 1.75rem;
+    }
+
+    .gjs-t-button {
+      background-color: var(--gjs-t-color-primary);
+      color: white;
+      border-radius: 0.3rem;
+    }
+
+    .gjs-t-link {
+      color: var(--gjs-t-color-primary);
+      text-decoration: underline;
+    }
+
+    .gjs-t-border {
+      border-radius: 0.3rem;
+      border-color: #e0e0e0;
+    }
+
+    #i8yj {
+      min-width: 1920px;
+      max-width: 1920px;
+      min-height: 400px;
+      max-height: 4080px;
+      margin: 0 auto;
+      background-color: rgb(255, 255, 255);
+      padding-top: 0.016px;
+      padding-right: 0px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+    }
+
+    #ip8abl {
+      font-size: 10px;
+      line-height: 15px;
+      letter-spacing: 0px;
+      margin-left: 14px;
+      white-space: normal;
+      color: rgba(106, 106, 106, 1);
+    }
+
+    #ip8abl-2 {
+      padding-bottom: 13px;
+      margin-right: 1%;
+    }
+
+    #i3jmze {
+      font-size: 10px;
+      line-height: 15px;
+      letter-spacing: 0px;
+      margin-left: 2%;
+      white-space: normal;
+      color: rgba(106, 106, 106, 1);
+    }
+
+    #ixyfq8 {
+      font-size: 10px;
+      line-height: 15px;
+      letter-spacing: 0px;
+      margin-left: 2%;
+      white-space: normal;
+      color: rgba(106, 106, 106, 1);
+    }
+
+    #iahrx7 {
+      padding-bottom: 13px;
+      margin-right: 1%;
+    }
+
+    #idb8rg {
+      padding-bottom: 13px;
+      margin-right: 1%;
+    }
+
+    #is1ack {
+      padding-bottom: 13px;
+      margin-right: 1%;
+    }
+
+    #iv2dcz {
+      padding-bottom: 13px;
+      margin-right: 1%;
+    }
+
+    #in7wpg {
+      padding-bottom: 13px;
+      margin-right: 1%;
+    }
+
+    #i81575 {
+      padding-bottom: 13px;
+      margin-right: 1%;
+    }
+
+    #iy50j7 {
+      padding-bottom: 13px;
+      margin-right: 1%;
+    }
+
+    #ipq72z {
+      padding-bottom: 13px;
+      margin-right: 1%;
+    }
+
+    .gjs-icon {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+      vertical-align: middle;
+      fill: currentColor;
+      width: 50px;
+      height: 50px;
+    }
+
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .gjs-t-body {
+      background-color: inherit;
+      color: inherit;
+      font-size: 1rem;
+      line-height: 1.75rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .gjs-t-h1 {
+      color: var(--gjs-t-color-secondary);
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+
+    .gjs-t-h2 {
+      color: #601843;
+      font-size: 1.2rem;
+      line-height: 1.75rem;
+    }
+
+    .gjs-t-button {
+      background-color: var(--gjs-t-color-primary);
+      color: white;
+      border-radius: 0.3rem;
+    }
+
+    .gjs-t-link {
+      color: var(--gjs-t-color-primary);
+      text-decoration: underline;
+    }
+
+    .gjs-t-border {
+      border-radius: 0.3rem;
+      border-color: #e0e0e0;
+    }
+
+    #i63s5 {
+      position: fixed;
+      top: 39px;
+      left: 30px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 34px;
+      color: rgb(77, 77, 77);
+    }
+
+    #iu53h {
+      color: rgb(119, 119, 119);
+      min-width: 475px;
+      max-width: 475px;
+      position: fixed;
+      top: 77px;
+      bottom: 340px;
+      left: 34px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      letter-spacing: 0px;
+      line-height: 19px;
+    }
+
+    #iu53h-2 {
+      color: rgb(119, 119, 119);
+      min-width: 475px;
+      max-width: 475px;
+      position: fixed;
+      top: 146px;
+      bottom: 303px;
+      left: 34px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      letter-spacing: 0px;
+      line-height: 19px;
+    }
+
+    #ix3y9 {
+      position: fixed;
+      top: 142px;
+      left: 93px;
+      background-color: rgb(80, 133, 165);
+      color: rgba(255, 255, 255, 1);
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-top-width: 0px;
+      border-right-width: 0px;
+      border-bottom-width: 0px;
+      border-left-width: 0px;
+      box-shadow: unset;
+      min-width: 42px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body id="i8yj" class="gjs-t-body">
+  <div id="i63s5">Novidade!</div>
+  <div id="iu53h">São José/SC agora conta com a tecnologia da Bimhub! Análise legal automatizada para revelar o
+    potencial do seu terreno. </div>
+  <div id="iu53h-2">
+    <div>Clique              para ir ao nosso site.</div>
+  </div>
+  <script src="https://unpkg.com/grapesjs"></script>
+  <script>
+    const editor = grapesjs.init({
+      container: '#gjs',
+      fromElement: false,
+      height: '100%',
+      canvas: {
+        styles: [
+          'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap'
+        ]
+      }
+    });
+
+    // Estilo global
+    editor.addStyle(`
+      * {
+        font-family: 'Poppins', sans-serif;
+      }
+    `);
+
+    // Componente de exemplo
+    editor.setComponents(`
+      <div style="padding: 25px; background: #f5f5f5;">
+        <h1 style="font-weight: 600; font-size: 32px;">Título com Poppins</h1>
+        <p style="font-size: 18px; line-height: 1.6;">
+          Este é um parágrafo de exemplo usando a fonte Poppins via Google Fonts no GrapesJS.
+        </p>
+      </div>
+    `);
+  </script><a id="ix3y9" href="https://bimhub.tec.br" target="_blank">Aqui</a>
+</body>
+
+</html>
